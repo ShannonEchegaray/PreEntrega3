@@ -1,0 +1,115 @@
+@import "mixins";
+
+// css general de la pagina
+
+
+/* Css general de la pagina */
+@font-face {
+    font-family: $fuente-normal;
+    src: url(../fuente/8bitOperatorPlus-Regular.ttf);
+}
+
+body{
+    background-color: $color-primario;
+    color: $color-fuente;
+    font-family: $fuente-normal;
+    a{
+        color: $color-fuente;
+    }
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+.header{
+    background-color: $color-primario;
+    border-bottom: 2px solid #fff;
+
+    /* Propiedad para ajustar el icono */
+    .min-wi{
+        min-width: 60px;
+    }
+
+    .anchor-header{
+        @include enlace-b(none);
+    }
+
+    .anchor-header-title{
+        @include enlace-b(none);
+    }
+
+
+    .menu-offcanvas{
+        background-color: $color-primario;
+        border-right: 5px solid #fff;
+    }
+
+    .anchor-offcanvas{
+        @include enlace-b(none);
+    }
+
+    .header-corazon{
+        position: relative;
+        &::before{
+            visibility: hidden;
+            content: "";
+            width: 25px;
+            height: 25px;
+            background-image: url(../img/Corazon.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            left: -15px;
+        }
+        &:hover::before{
+            visibility: visible;
+        }
+    }
+
+    .is-selected{
+        position: relative;
+    }
+
+    .is-selected::before{
+        position: absolute;
+        content: ">";
+        animation: select 2s steps(2) infinite;
+    }
+
+    .is-selected-non-title{
+        @extend .is-selected;
+    }
+
+    .is-selected-non-title::before{
+        animation: select-menu 2s steps(2) infinite;
+    }
+}
+
+main{
+
+    section > div{
+        border: 5px solid #fff;
+    }
+
+    .main-color{
+        background-color: $color-secundario;
+    }
+
+    .main-anchor{
+        @include enlace-a(underline);
+    }
+
+    .main-anchor-title{
+        @include enlace-a(none);
+    }
+
+}
+
+footer{
+    border-top: 2px solid #fff;
+    padding-top: 10px;
+
+    .main-anchor-title{
+        @include enlace-b(none);
+    }
+}

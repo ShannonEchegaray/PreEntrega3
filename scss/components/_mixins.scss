@@ -1,0 +1,22 @@
+// Mixins
+
+@mixin media-q($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)){
+        @content
+    }
+}
+
+@mixin enlace-a($has-underscore){
+    text-decoration: $has-underscore;
+    &:hover{
+        color: $color-boton-hover;
+    }
+}
+
+@mixin enlace-b($has-underscore){
+    text-decoration: $has-underscore;
+    &:hover{
+        color: $color-boton-hover;
+        text-shadow: 0 0 4px $color-boton-hover;
+    }
+}

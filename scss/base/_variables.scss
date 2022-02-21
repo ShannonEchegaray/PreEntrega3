@@ -1,0 +1,24 @@
+// Breakpoints
+
+$breakpoints: (
+    small : 576px,
+    medium : 768px,
+    large : 992px,
+    extralarge : 1200px,
+    extraextralarge : 1400px
+);
+
+// Colores pagina
+
+$color-primario: #000;
+$color-secundario: #291129;
+
+// Colores Botones - Links
+
+$color-boton: #fff;
+$color-boton-hover: #ffff00;
+
+// Fuentes
+
+$fuente-normal: "8bitoperator";
+$color-fuente: #fff;

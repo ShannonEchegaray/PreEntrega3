@@ -1,0 +1,21 @@
+// Animaciones
+
+/* Animaciones */
+
+@keyframes select {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: -15px;
+    }
+}
+
+@keyframes select-menu {
+    0%{
+        left: -7px;
+    }
+    100%{
+        left: -3px;
+    }
+}

@@ -1,0 +1,25 @@
+// Media queries
+
+/* Media queries */
+
+/* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */
+@include media-q(large){
+    .sticky-menu{
+        position: sticky;
+        top:0;
+        z-index: 1;
+    }
+}
+
+/* Media querie para que no haya un border left-right cuando este en modo responsive */
+
+@include media-q(medium){
+    main{
+        section:not(.bienvenida){
+            & > div{
+                border-left: none;
+                border-right: none;
+            }
+        }
+    }
+}
